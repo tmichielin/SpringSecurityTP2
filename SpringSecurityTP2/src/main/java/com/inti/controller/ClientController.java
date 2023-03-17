@@ -18,7 +18,7 @@ public class ClientController {
 	@Autowired
 	IClientRepository icr;
 	
-	@GetMapping("formClient")
+	@GetMapping("inscription")
 	public String formClient()
 	{
 		return "formClient";
