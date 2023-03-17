@@ -11,12 +11,12 @@
 <title>Nouveau salarié</title>
 </head>
 <body>
-<form method="post" action="saveSalarie" modelAttribute="salarie">
+<form method="post" th:action="@{saveSalarie}" modelAttribute="salarie">
 	
-			<div class="mb-3">
-			<label for="hotel" class="form-label">Hotel</label> 
-			<input type="text" name="hotel" class="form-control" id="hotel">
-		</div>
+<!-- 			<div class="mb-3"> -->
+<!-- 			<label for="hotel" class="form-label">Hotel</label>  -->
+<!-- 			<input type="text" name="hotel" class="form-control" id="hotel"> -->
+<!-- 		</div> -->
 		<div class="mb-3">
 			<label for="username" class="form-label">Username</label> 
 			<input type="text" name="username" class="form-control" id="username">
@@ -27,11 +27,11 @@
 		</div>
 		<div class="mb-3">
 			<label for="dateNaissance" class="form-label">Date de naissance</label> 
-			<input type="date" name="dateNaissance" class="form-control" id="dateNaissance">
+			<input type="text" name="dateNaissance" class="form-control" id="dateNaissance" placeholder="AAAA-MM-DD">
 		</div>
 				<div class="mb-3">
 			<label for="dateEmbauche" class="form-label">Date d'embauche</label> 
-			<input type="date" name="dateEmbauche" class="form-control" id="dateEmbauche">
+			<input type="text" name="dateEmbauche" class="form-control" id="dateEmbauche" placeholder="AAAA-MM-DD">
 		</div>
 		<div class="mb-3">
 			<label for="type" class="form-label">Type</label> 

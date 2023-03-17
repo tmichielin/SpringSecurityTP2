@@ -58,4 +58,17 @@ public class Salarie {
     @Exclude
     Role role;
 
+
+	public Salarie(String type, LocalDate dateNaissance, LocalDate dateEmbauche, @NonNull String username,
+			@NonNull String mdp) {
+		super();
+		this.type = type;
+		this.dateNaissance = dateNaissance;
+		this.dateEmbauche = dateEmbauche;
+		this.username = username;
+		this.mdp = mdp;
+	}
+    
+    
+
 }
