@@ -29,7 +29,16 @@ public class Client {
     private String email;
     private String tel;
     
-    @OneToMany
+    public Client(String nom, String prenom, String adresse, String email, String tel) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+		this.email = email;
+		this.tel = tel;
+	}
+
+	@OneToMany
     @Exclude
     private List<Chambre> listeChambres;
 
