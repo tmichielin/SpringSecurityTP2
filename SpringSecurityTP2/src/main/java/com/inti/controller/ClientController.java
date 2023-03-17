@@ -18,7 +18,7 @@ public class ClientController {
 	@Autowired
 	IClientRepository icr;
 	
-	@GetMapping("formClient")
+	@GetMapping("inscription")
 	public String formClient()
 	{
 		return "formClient";
@@ -29,15 +29,15 @@ public class ClientController {
 	{
 		icr.save(c);
 		
-		return "redirect:/listeClient";
+		return "formClient";
 	}
 	
-	@GetMapping("listeClient")
-	public String listeClient(Model m)
+	@GetMapping("listeClients")
+	public String listeClients(Model m)
 	{
-		m.addAttribute("listeClient", icr.findAll());
+		m.addAttribute("listeClients", icr.findAll());
 		
-		return "listeClient";
+		return "listeClients";
 	}
 	
 	@GetMapping("deleteClient/{id}")
@@ -45,7 +45,7 @@ public class ClientController {
 	{
 		icr.deleteById(id);
 		
-		return "redirect:/listeClient";
+		return "redirect:/listeClients";
 	}
 	
 	

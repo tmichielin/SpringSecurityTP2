@@ -9,16 +9,16 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString.Exclude;
 
 @Entity
 @Table
 @Data
+@NoArgsConstructor @AllArgsConstructor
 public class Client {
-
-    public Client() {
-    }
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -28,9 +28,18 @@ public class Client {
     private String adresse;
     private String email;
     private String tel;
-    
-    @OneToMany
+ 
+	@OneToMany
     @Exclude
     private List<Chambre> listeChambres;
+	   
+    public Client(String nom, String prenom, String adresse, String email, String tel) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+		this.email = email;
+		this.tel = tel;
+	}
 
 }
