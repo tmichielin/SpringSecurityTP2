@@ -32,8 +32,8 @@ public class SalarieController {
 	}
 
 	@PostMapping("saveSalarie")
-	public String saveSalarie(@ModelAttribute("salarie") Salarie l) {
-		isr.save(l);
+	public String saveSalarie(@ModelAttribute("salarie") Salarie s) {
+		isr.save(s);
 		return "redirect:/listeSalarie";
 	}
 
@@ -43,6 +43,8 @@ public class SalarieController {
 		m.addAttribute("listeSalarie", isr.findAll());
 		return "listeSalarie";
 	}
+	
+	// Afficher un salarié
 	@GetMapping("getSalarie")
 	public String getSalarie(@RequestParam("id") int id, Model m) {
 		m.addAttribute("salarie", isr.findById(id).get());
@@ -65,9 +67,9 @@ public class SalarieController {
 	}
 	
 	@PostMapping("updateSalarie")
-	public String updateSalarie(@ModelAttribute("salarie") Salarie l)
+	public String updateSalarie(@ModelAttribute("salarie") Salarie s)
 	{
-		isr.save(l);
+		isr.save(s);
 		return "redirect:/listeSalarie";
 	}
 	
