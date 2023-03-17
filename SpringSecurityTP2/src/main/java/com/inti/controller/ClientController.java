@@ -45,7 +45,7 @@ public class ClientController {
 	{
 		icr.deleteById(id);
 		
-		return "redirect:/listeClient";
+		return "redirect:/listeClients";
 	}
 	
 	
