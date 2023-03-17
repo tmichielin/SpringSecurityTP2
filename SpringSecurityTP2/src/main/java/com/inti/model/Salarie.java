@@ -17,6 +17,7 @@ import javax.persistence.Table;
 import lombok.Data;
 
 import lombok.EqualsAndHashCode.Exclude;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 
@@ -25,6 +26,7 @@ import lombok.NonNull;
 @Entity
 @Table
 @Data
+@NoArgsConstructor
 public class Salarie {
 
 
